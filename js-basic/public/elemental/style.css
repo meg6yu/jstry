@@ -1,0 +1,53 @@
+#hexes {
+  text-align: center;
+}
+
+.hex {
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  height: 144px;
+  line-height: 150px;
+  background-color: #fff;
+  margin: -14px 7px;
+  overflow: hidden;
+  text-indent: 100%;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+#space-cat {
+  background: url("./images/space-cat.png");
+  background-size: contain;
+}
+
+#space-tuna {
+  background: url("./images/space-tuna.png");
+  background-size: contain;
+}
+
+#space-uni {
+  background: url("./images/space-uni.png");
+  background-size: contain;
+}
+
+#space-hotate {
+  background: url("./images/space-hotate.png");
+  background-size: contain;
+}
+
+#space-maki {
+  background: url("./images/space-maki.png");
+  background-size: contain;
+}
+
+#space-salmon {
+  background: url("./images/space-salmon.png");
+  background-size: contain;
+}
+
+#space-agari {
+  background: url("./images/space-agari.png");
+  background-size: contain;
+}

@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <!-- JS Libraries -->
+    <script src="/bower_components/axios/dist/axios.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="ajax.js"></script>
+  </head>
+
+  <body>
+    <h2>Sync vs. Async</h2>
+
+    <button id="button">Get Users</button>
+
+    <div>
+      <span id="counter"></span>
+    </div>
+
+    <pre id="users"></pre>
+
+
+    <!-- Sync vs. Async -->
+    <script>
+
+      startCounting(); // 目盛りが増える
+
+      onButtonClick(function(){
+
+        addText("[Request]");
+
+        // Async: true
+        requestUsers(false, function(users){
+          printUsers(users);
+          addText("[Response]");
+        });
+
+        addText("[End]");
+      });
+
+    </script>
+    
+  </body>
+</html>

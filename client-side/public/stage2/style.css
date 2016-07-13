@@ -1,0 +1,16 @@
+.clear-fix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.box {
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+	background-color: #AAFFAA;
+	border: solid 1px #00FF00;
+	text-align: center;
+	line-height:50px;
+	float: left;
+}

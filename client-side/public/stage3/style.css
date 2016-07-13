@@ -1,0 +1,99 @@
+ul, li {
+  list-style-type: none;
+}
+
+input[type="text"], textarea {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px;
+  font-size: 14px;
+}
+
+#event-training {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+}
+
+#emoine {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  border: 1px #ddd solid;
+  padding: 0 8px;
+  border-radius: 3px;
+  background: #fff;
+  text-decoration: none;
+  color: #444;
+}
+
+#emoCount {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  min-width: 18px;
+  position: relative;
+  border-radius: 3px;
+  padding: 0 6px;
+  background: #d8d8d8;
+  margin-left: 10px;
+  text-align: center;
+  color: #444;
+}
+
+#emoCount:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px transparent solid;
+  border-right-color: #d8d8d8;
+  top: 50%;
+  margin-top: -5px;
+  left: -10px;
+}
+
+#tooltipArea {
+  position: relative;
+}
+
+#withTooltip {  
+  width: 200px;
+}
+
+#tooltip {
+  display: none;
+  box-sizing: border-box;
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  min-width: 18px;
+  border-radius: 3px;
+  background: #d8d8d8;
+  margin-top: 8px;
+  text-align: center;
+  color: #444;
+}
+
+#tooltip:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px transparent solid;
+  border-bottom-color: #d8d8d8;
+  top: -10px;
+  left: 50%;
+  margin-left: -5px;
+}
+
+#showSelectedValue {
+  width: 150px;
+}
+
+#countIndicator {
+  color: #000;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>DOM操作 - JS Training</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://www.bizreach.jp/img/logo/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="/bower_components/mocha/mocha.css" />
+    <link rel="stylesheet" href="/common/mocha-patch.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="training-content">
+      <h1 id="title">DOM操作</h1>
+      <form id="bizreach-form">
+        <input type="text" id="hello" value="こんにちは世界">
+        <input type="checkbox" name="checks">
+        <input type="checkbox" name="checks" checked>
+        <input type="checkbox" name="checks">
+        <input type="checkbox" name="checks" checked>
+        <input type="radio" name="radios" value="foo">
+        <input type="radio" name="radios" value="bar" checked>
+        <input type="radio" name="radios" value="baz">
+        <select id="cred">
+          <option>できる理由から始めよう</option>
+          <option selected>逆算→突破→展開→仕組み化</option>
+          <option>マッハGO!GO!</option>
+          <option>お客様の感動にコミットしよう</option>
+          <option>巻き込み、巻き込まれよう</option>
+          <option>最高の仲間と歴史を創ろう</option>
+        </select>
+        <button id="java">Java</button>
+      </form>
+      <p id="composed-text"><span id="word-java">Java</span></p>
+      <span id="word-script">Script</span>
+      <p id="deletable-text">
+        <span>Java</span> <span>Script</span> <span>Is</span> <span>Good</span>
+      </p>
+      <div>
+        <h2 class="redText">スタイルの更新</h1>
+        <div id="boxes" class="clear-fix">
+          <div class="box" id="box1">1番目</div>
+          <div class="box" id="box2">2番目</div>
+          <div class="box" id="box3">3番目</div>
+        </div>
+        <div>
+          <img id="img-sushi" src="sushi.png" width="150">
+        </div>
+        <div>
+          <img id="img-ishiki-way-man" src="ishiki.png" width="150">
+        </div>
+        <div>
+          <img id="img-circle1" src="circle.png" width="150">
+          <img id="img-circle2" src="circle.png" width="150">
+        </div>
+      </div>
+    </main>
+
+    <div id="mocha"></div>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/mocha/mocha.js"></script>
+    <script src="/bower_components/chai/chai.js"></script>
+    <script src="/bower_components/chai-jquery/chai-jquery.js"></script>
+    <script>
+      mocha.ui('bdd');
+      mocha.reporter('html');
+      expect = chai.expect;
+      function findSelectedOption(select) {
+        return select.selectedOptions[0].innerHTML;
+      }
+      document.getElementById('bizreach-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+      });
+    </script>
+    <script>mocha.setup('bdd')</script>
+    <script src="tests.js"></script>
+    <script>
+      if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+      else { mocha.run(); }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>jQuery - JS Training</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://www.bizreach.jp/img/logo/favicon.ico" rel="icon">
+  <link rel="stylesheet" href="/bower_components/mocha/mocha.css" />
+  <link rel="stylesheet" href="/common/mocha-patch.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main id="training-content">
+  <div id="hexes">
+    <div id="space-cat" class="hex" title="cat">Space Cat</div
+    ><div id="space-tuna" class="hex" title="tuna">Space Tuna</div
+    ><div id="space-uni" class="hex" title="uni">Space Uni</div
+    ><div id="space-hotate" class="hex" title="hotate">Space Hotate</div
+    ><div id="space-maki" class="hex" title="makizushi">Space Makizushi</div
+    ><div id="space-salmon" class="hex" title="salmon">Space Salmon</div
+    ><div id="space-agari" class="hex" title="agari">Space Agari</div>
+  </div>
+  <div id="event-training">
+    <div>
+      <a href="#" id="emoine">エモいね! </a><span id="emoCount">0</span>
+    </div>
+    <div id="tooltipArea">
+      <input type="text" id="withTooltip" placeholder="input field with tooltip." /><span id="tooltip">This is a very useful hint!</span>
+    </div>
+    <div>
+      <select id="showSelectedValue">
+        <option value="Encapsulation">カプセル化</option>
+        <option value="Infomation Hiding">情報隠蔽</option>
+        <option value="Abstraction">抽象化</option>
+      </select><br>
+      → <span id="translated"></span>
+    </div>
+    <form id="mustNotEmpty">
+      <input id="required" name="requiredInput" type="text" /><button type="submit">submit</button>
+    </form>
+    <div>
+      <textarea id="wordCount"></textarea> <span id="countIndicator">0</span> / 140
+    </div>
+  </div>
+</main>
+<div id="mocha"></div>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="main.js"></script>
+<script src="/bower_components/mocha/mocha.js"></script>
+<script src="/bower_components/chai/chai.js"></script>
+<script src="/bower_components/chai-jquery/chai-jquery.js"></script>
+<script>
+  mocha.ui('bdd');
+  mocha.reporter('html');
+  expect = chai.expect;
+</script>
+<script>mocha.setup('bdd');</script>
+<script src="tests.js"></script>
+<script>
+  if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+  else { mocha.run(); }
+</script>
+</body>
+</html>

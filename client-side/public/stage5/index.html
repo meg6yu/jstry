@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Ajax - JS Training</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://www.bizreach.jp/img/logo/favicon.ico" rel="icon">
+  <link rel="stylesheet" href="/bower_components/mocha/mocha.css" />
+  <link rel="stylesheet" href="/common/mocha-patch.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main id="training-content">
+  <dl id="ajaxResponse">
+
+  </dl>
+</main>
+<div id="mocha"></div>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/axios/dist/axios.min.js"></script>
+<script src="/bower_components/mocha/mocha.js"></script>
+<script src="/bower_components/chai/chai.js"></script>
+<script src="../bower_components/chai-as-promised/lib/chai-as-promised.js"></script>
+<script src="/bower_components/chai-jquery/chai-jquery.js"></script>
+<script>
+  mocha.ui('bdd');
+  mocha.reporter('html');
+  expect = chai.expect;
+  assert = chai.assert;
+</script>
+<script>mocha.setup('bdd');</script>
+<script src="tests.js"></script>
+<script>
+  if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+  else { mocha.run(); }
+</script>
+</body>
+</html>

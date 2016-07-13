@@ -1,0 +1,158 @@
+ul, li {
+  list-style-type: none;
+}
+
+input[type="text"], textarea {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px;
+  font-size: 14px;
+}
+
+#hexes {
+  text-align: center;
+}
+
+.hex {
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  height: 144px;
+  line-height: 150px;
+  background-color: #fff;
+  margin: -14px 7px;
+  overflow: hidden;
+  text-indent: 100%;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+#space-cat {
+  background: url("./images/space-cat.png");
+  background-size: contain;
+}
+
+#space-tuna {
+  background: url("./images/space-tuna.png");
+  background-size: contain;
+}
+
+#space-uni {
+  background: url("./images/space-uni.png");
+  background-size: contain;
+}
+
+#space-hotate {
+  background: url("./images/space-hotate.png");
+  background-size: contain;
+}
+
+#space-maki {
+  background: url("./images/space-maki.png");
+  background-size: contain;
+}
+
+#space-salmon {
+  background: url("./images/space-salmon.png");
+  background-size: contain;
+}
+
+#space-agari {
+  background: url("./images/space-agari.png");
+  background-size: contain;
+}
+
+#event-training {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+#emoine {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  border: 1px #ddd solid;
+  padding: 0 8px;
+  border-radius: 3px;
+  background: #fff;
+  text-decoration: none;
+  color: #444;
+}
+
+#emoCount {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  min-width: 18px;
+  position: relative;
+  border-radius: 3px;
+  padding: 0 6px;
+  background: #d8d8d8;
+  margin-left: 10px;
+  text-align: center;
+  color: #444;
+}
+
+#emoCount:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px transparent solid;
+  border-right-color: #d8d8d8;
+  top: 50%;
+  margin-top: -5px;
+  left: -10px;
+}
+
+#tooltipArea {
+  position: relative;
+}
+
+#withTooltip {
+  width: 200px;
+}
+
+#tooltip {
+  display: none;
+  box-sizing: border-box;
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  min-width: 18px;
+  border-radius: 3px;
+  background: #d8d8d8;
+  margin-top: 8px;
+  text-align: center;
+  color: #444;
+}
+
+#tooltip:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px transparent solid;
+  border-bottom-color: #d8d8d8;
+  top: -10px;
+  left: 50%;
+  margin-left: -5px;
+}
+
+#tooltip.active {
+  display: block;
+}
+
+#showSelectedValue {
+  width: 150px;
+}
+
+#countIndicator {
+  color: #000;
+}

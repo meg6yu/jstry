@@ -1,0 +1,9 @@
+{
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "quotes": [2, "single", "avoid-escape"], // シングルクオートに統一
+    "no-unused-vars": [2, {"vars": "all", "args": "after-used"}] // 使用されていない変数を禁止
+  }
+}

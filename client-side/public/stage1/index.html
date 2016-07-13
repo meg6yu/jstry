@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>DOMの基本 - JS Training</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://www.bizreach.jp/img/logo/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="/bower_components/mocha/mocha.css" />
+    <link rel="stylesheet" href="/common/mocha-patch.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="training-content">
+      <div>
+        <div id="fixed-position">
+          <img id="swimmy" alt="Work Hard, Play SUPER Hard." src="swimmy.jpg">
+        </div>
+        <div id="fixed-position2">
+        </div>
+      </div>
+      <h1 id="hello">Hello, DOM World!</h1>
+      <ul class="horizontal-list">
+        <li>foo</li>
+        <li>bar</li>
+        <li>baz</li>
+        <li>qux</li>
+      </ul>
+      <ul class="horizontal-list">
+        <li class="bizreach-service">BIZREACH</li>
+        <li class="bizreach-service">careertrek</li>
+        <li class="bizreach-service hide">codebreak;</li>
+        <li class="bizreach-service hide">zuknow</li>
+        <li class="bizreach-service">スタンバイ</li>
+        <li class="bizreach-service">
+          <section>
+            <header>戦略人事クラウド</header>
+            <main>
+              <p>
+                <span class="hrmos-20160614">HRMOS</span>
+              </p>
+            </main>
+            <footer>採用管理</footer>
+          </section>
+        </li>
+      </ul>
+      <button id="toggle-swimmy">show first swimmy</button>
+      <button id="toggle-second-swimmy">show second swimmy</button>
+      <div>
+        <button id="toggle-mach">show mach 55</button>
+        <div id="mach">Mach<br/>55</div>
+      </div>
+    </main>
+
+    <div id="mocha"></div>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/mocha/mocha.js"></script>
+    <script src="/bower_components/chai/chai.js"></script>
+    <script src="/bower_components/chai-jquery/chai-jquery.js"></script>
+    <script>
+      mocha.ui('bdd');
+      mocha.reporter('html');
+      expect = chai.expect;
+    </script>
+    <script>mocha.setup('bdd')</script>
+    <script src="tests.js"></script>
+    <script>
+      var secondSwimmy = document.createElement('img');
+      !function(){var 鮨=document.getElementsByTagName("head")[0],鮭=document.getElementById("fixed-position"),鰤=document.getElementById('fixed-position2'),鯛=document.getElementById("mach"),鯖=document.getElementById("toggle-swimmy"),鰻=document.getElementById("toggle-second-swimmy"),鯉=document.getElementById("toggle-mach"),鮪=document.createElement("img");secondSwimmy.setAttribute("id","second-swimmy"),secondSwimmy.setAttribute("alt","40歳"),secondSwimmy.setAttribute("src","swimmy.jpg"),鮪.setAttribute("alt","3人目のSwimmy"),鮪.setAttribute("src","swimmy.jpg"),鰤.appendChild(secondSwimmy),鮨.appendChild(鮪),鯖.addEventListener("click",function(鮨){var 鯛="show";鯖.innerHTML=鮭.classList.contains(鯛)?"show first swimmy":"hide first swimmy",鮭.classList.contains(鯛)?鮭.classList.remove(鯛):鮭.classList.add(鯛)}),鰻.addEventListener("click",function(鮨){鰻.innerHTML=鰤.childElementCount<1?"hide second swimmy":"show second swimmy",鰤.childElementCount<1?鰤.appendChild(secondSwimmy):鰤.removeChild(secondSwimmy)}),鯉.addEventListener("click",function(鮨){var 鮭="show";鯉.innerHTML=鯛.classList.contains(鮭)?"show mach 55":"hide mach 55",鯛.classList.contains(鮭)?鯛.classList.remove(鮭):鯛.classList.add(鮭)})}();
+
+      if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+      else { mocha.run(); }
+
+      setTimeout(function() {
+        document.getElementById('fixed-position2').removeChild(secondSwimmy);
+      }, 100);
+
+      (function(f) {
+        f(f);
+      })(function(f) {
+        var m = document.getElementById('mach');
+        var left = parseInt(m.style.left);
+        if (left <= 1000) {
+          left += 6;
+        } else {
+          left = 0;
+        }
+        m.style.left = left + 'px';
+        setTimeout(function() {
+          f(f);
+        }, 1000 / 60);
+      });
+    </script>
+  </body>
+</html>

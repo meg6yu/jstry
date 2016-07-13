@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+#training-content {
+  padding: 40px 0;
+  background: #eee;
+}
+
+#mocha {
+  position: relative;
+  margin: 40px 30px !important;
+}
+
+#mocha code .comment {
+  color: #444;
+}
+
+#mocha .test h2 {
+  font-weight: bold;
+}
+
+#mocha .test.pass::before{
+  color: #16B995;
+  font-size: 24px;
+  margin-top: -10px;
+  margin-right: 0;
+}
+
+#mocha .test.fail::before{
+  content: '✗';
+  font-size: 22px;
+  margin-top: -8px;
+}
+
+
+#mocha #mocha-stats {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  top: auto;
+  padding: 10px;
+  vertical-align: middle;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+  font-size: 14px;
+}
+
+#mocha #mocha-stats li {
+    height: 40px;
+    line-height: 40px;
+    padding-top: 0px;
+}
+
+#mocha #mocha-stats li em {
+    font-size: 20px;
+}
+
+#mocha #mocha-stats li.passes em {
+  color: #16B995;
+}
+
+#mocha #mocha-stats li.failures em {
+  color: #C72A20;
+}
+
+#mocha #mocha-stats li.progress {
+    display: none;
+}
+
+#mocha .suite {
+  margin-bottom: 0.8em;
+}
+
+#mocha .suite h1 {
+  margin-bottom: 0.5em;
+}
+
+#mocha .suite .suite h1 {
+  margin-bottom: 0.5em;
+}
+
+#mocha .test {
+  margin-bottom: 0.5em;
+}

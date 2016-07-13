@@ -1,0 +1,10 @@
+ul, li {
+  list-style-type: none;
+}
+
+input[type="text"], textarea {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px;
+  font-size: 14px;
+}
