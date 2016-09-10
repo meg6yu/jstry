@@ -884,7 +884,7 @@ var momoko = (new Person('Momoko', []))
 
 - CDN を利用する
   - 外部サーバー依存だが、お手軽
-  - npmcdn, cdnjs, jsdelivr など (教科書に載っている google-code はサービス終了済)
+  - unpkg, cdnjs, jsdelivr など (教科書に載っている google-code はサービス終了済)
 
   ```
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
